@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="dir_b0928fa05db54fbd03f05569b20534cd" kind="dir">
+    <compoundname>bluetooth5</compoundname>
+    <innerfile refid="api_8h">api.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/ljwong/software_radios/final_project/gr-bluetooth5/include/bluetooth5/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,30 @@
+INCLUDE(FindPkgConfig)
+PKG_CHECK_MODULES(PC_BLUETOOTH5 bluetooth5)
+
+FIND_PATH(
+    BLUETOOTH5_INCLUDE_DIRS
+    NAMES bluetooth5/api.h
+    HINTS $ENV{BLUETOOTH5_DIR}/include
+        ${PC_BLUETOOTH5_INCLUDEDIR}
+    PATHS ${CMAKE_INSTALL_PREFIX}/include
+          /usr/local/include
+          /usr/include
+)
+
+FIND_LIBRARY(
+    BLUETOOTH5_LIBRARIES
+    NAMES gnuradio-bluetooth5
+    HINTS $ENV{BLUETOOTH5_DIR}/lib
+        ${PC_BLUETOOTH5_LIBDIR}
+    PATHS ${CMAKE_INSTALL_PREFIX}/lib
+          ${CMAKE_INSTALL_PREFIX}/lib64
+          /usr/local/lib
+          /usr/local/lib64
+          /usr/lib
+          /usr/lib64
+)
+
+INCLUDE(FindPackageHandleStandardArgs)
+FIND_PACKAGE_HANDLE_STANDARD_ARGS(BLUETOOTH5 DEFAULT_MSG BLUETOOTH5_LIBRARIES BLUETOOTH5_INCLUDE_DIRS)
+MARK_AS_ADVANCED(BLUETOOTH5_LIBRARIES BLUETOOTH5_INCLUDE_DIRS)
+
