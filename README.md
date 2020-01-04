@@ -1,3 +1,3 @@
 # gr-bluetooth5
 
-A custom GNU radio block for parsing bluetooth 5 packets.
+A custom GNU radio block for parsing bluetooth 5 advertising packets.
